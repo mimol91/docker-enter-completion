@@ -25,7 +25,8 @@ _docker_enter () {
   local curcontext="$curcontext" state line
   typeset -A opt_args
 
-  _arguments '1: :->command'
+  _arguments \
+    '1: :->command'
 
   case $state in
     command) _docker_running_containers ;;
