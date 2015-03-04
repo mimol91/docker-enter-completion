@@ -2,10 +2,14 @@
 
 Command completion for `docker-enter` (https://github.com/jpetazzo/nsenter)
 
-These little scripts will just autocomplete the `docker-enter` command with the docker container name you wish to enter.
+These little scripts will just autocomplete the `docker-enter` command with the docker container name you wish to (ns)enter.
 
-## Bash
+## Installation
 
-## Zsh
+### Bash
 
-## Zsh/oh-my-zsh
+### Zsh
+
+### Zsh/oh-my-zsh
+
+## Demo
