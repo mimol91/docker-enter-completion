@@ -6,6 +6,8 @@ These little scripts will just autocomplete the `docker-enter` command with the 
 
 ## Installation
 
+Requirements: `perl`.
+
 ### Bash
 
 ```bash
