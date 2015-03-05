@@ -35,4 +35,4 @@ Then simply add `docker-enter` in your `.zshrc` plugins' list, restart or source
 
 ## Demo
 
-Coming soon...
+![](https://i.imgur.com/POQL7cn.gif)
