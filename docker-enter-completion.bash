@@ -17,7 +17,7 @@
 _docker_running_containers() {
   local current words
   current="${COMP_WORDS[COMP_CWORD]}"
-  words="$(docker ps | perl -ne '@cols = split /\s{2,}/, $_; printf "%20s\n", $cols[6]' | tail -n +3 | awk '$1' | xargs)"
+  words="$( docker inspect --format='{{.Name}}' $(docker ps -q --no-trunc)| sed 's=^/==' | tail -n +3 | awk '$1' | xargs)"
   COMPREPLY=($(compgen -W "$words" -- "$current"))
 
   return 0
