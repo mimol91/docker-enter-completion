@@ -18,7 +18,7 @@ local curcontext=$curcontext state line
 declare -A opt_args
 
 _docker_running_containers() {
-  compadd "$@" $(docker ps | perl -ne '@cols = split /\s{2,}/, $_; printf "%20s\n", $cols[6]' | tail -n +3 | awk '$1' | xargs)
+  compadd "$@" $( docker inspect --format='{{.Name}}' $(docker ps -q --no-trunc)| sed 's=^/=='  | xargs)
 }
 
 _docker_enter () {
